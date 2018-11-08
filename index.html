@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p v-if="show"><i>{{ message }}</i></p>
+        <p v-else="show">{{ message2 }}</p>
+        <p>pengurangan {{ int1 }} diambil {{ int2 }} adalah {{ pengurangan }}</p>
+        <button v-on:click="penguranganProses">hasil pengurangan</button>
+        <p>penjumlahan {{ int1 }} + {{ int2 }} = {{ penjumlahan }}</p>
+        <button v-on:click="penjumlahanProses(10)">hasil penjumlahan (parameter=+10)</button><br>
+        <p>input meter</p>
+        <input type="text" v-model="meter">
+        <p>input kilometer</p>
+        <input type="text" v-model="kilometer">
+    </div><br>
+
+    <h1>Part lain</h1>
+    <div id="app2">
+        <p>v-model input</p>
+        <input type="text" v-model="tulis">
+        {{ tulis }} <br>
+        <p>v-model input text area</p>
+        <textarea cols="30" rows="10" v-model="testteks">
+
+        </textarea><br>
+        <p style="white-space: pre-line">{{ testteks }}</p>
+    </div>
+    <script src="assets/vendor/vue.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
