@@ -27,9 +27,23 @@
         {{ tulis }} <br>
         <p>v-model input text area</p>
         <textarea cols="30" rows="10" v-model="testteks">
-
         </textarea><br>
         <p style="white-space: pre-line">{{ testteks }}</p>
+        <p>v-model input radio button</p>
+        <input type="radio" v-model="testradio" value="mobil">A <br>
+        <input type="radio" v-model="testradio" value="motor">B <br>
+        <p>pilihan anda {{ testradio }}</p><br>
+
+        <label for="buat checkbox">v-model checkbox</label><br>
+        <input type="checkbox" value="sepak-bola" v-model="checkbox"><br>
+        <label for="buat checkbox">v-model checkbox</label><br>
+        <input type="checkbox" value="voli" v-model="checkbox"><br>
+        <label for="buat checkbox">v-model checkbox</label><br>
+        <input type="checkbox" value="basket" v-model="checkbox"><br>
+        <p>hobi saya {{ checkbox }}</p>
+        <ul>
+            <li v-for="choice in checkbox">{{ choice }}</li>
+        </ul>
     </div>
     <script src="assets/vendor/vue.js"></script>
     <script src="assets/js/app.js"></script>

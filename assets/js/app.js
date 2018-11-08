@@ -41,11 +41,12 @@ var app = new Vue ({
     }
 })
 
-
 var app = new Vue ({
     el: '#app2',
     data: {
         tulis:'',
-        testteks:''
+        testteks:'',
+        testradio:'',
+        checkbox: []
     }
 })
