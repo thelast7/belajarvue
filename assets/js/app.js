@@ -47,6 +47,17 @@ var app = new Vue ({
         tulis:'',
         testteks:'',
         testradio:'',
-        checkbox: []
+        checkbox: [],
+        select: []
+        // select: ''
+    }
+})
+
+var app = new Vue({
+    el: '#app3',
+    data: {
+        sample: 'assets/img/vue.png',
+        sampleLink: 'https://google.com',
+        sampleFont: 'color: red; font-size: 40;'
     }
 })

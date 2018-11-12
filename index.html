@@ -34,16 +34,37 @@
         <input type="radio" v-model="testradio" value="motor">B <br>
         <p>pilihan anda {{ testradio }}</p><br>
 
-        <label for="buat checkbox">v-model checkbox</label><br>
+        <label for="buat checkbox">sepak bola</label>
         <input type="checkbox" value="sepak-bola" v-model="checkbox"><br>
-        <label for="buat checkbox">v-model checkbox</label><br>
+        <label for="buat checkbox">voli</label>
         <input type="checkbox" value="voli" v-model="checkbox"><br>
-        <label for="buat checkbox">v-model checkbox</label><br>
+        <label for="buat checkbox">basket</label>
         <input type="checkbox" value="basket" v-model="checkbox"><br>
         <p>hobi saya {{ checkbox }}</p>
         <ul>
             <li v-for="choice in checkbox">{{ choice }}</li>
+        </ul><br>
+
+        <!-- <select v-model="select"> //pemilihan single -->
+        <select v-model="select" multiple>
+            <option value="" disabled>pilih bahasa</option>
+            <option value="php">PHP</option>
+            <option value="python">Python</option>
+            <option value="javascript">Javascript</option>
+        </select><br>
+        bahasa pilihan adalah : {{ select }}<br>
+        <ul>
+            <li v-for="sel in select">{{ sel }}</li>
         </ul>
+    </div>
+
+    <div id="app3">
+        <p>test gambar :</p><br>
+        <img v-bind:src="sample" height="300" width="300"><br>
+        <p>test link</p><br>
+        <a v-bind:href="sampleLink">Google</a><br>
+        <p>test fontstyle</p>
+        <p v-bind:style="sampleFont">SAMPLE</p>
     </div>
     <script src="assets/vendor/vue.js"></script>
     <script src="assets/js/app.js"></script>
