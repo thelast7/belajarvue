@@ -66,6 +66,20 @@
         <p>test fontstyle</p>
         <p v-bind:style="sampleFont">SAMPLE</p>
     </div>
+
+    <div id="app4">
+        <button v-on:click="message = 'ditekan via v-on click'">tombol1</button>
+        <button @click="message = 'ditekan via @click'">tombol2</button>
+        <button @click="tampilAlert">tombol3</button>
+        <p>{{ message }}</p><br>
+
+        <p>materi video 14</p>
+        <input type="text" v-on:keyUp.enter="pesan = 'anda tekan enter'"> {{ pesan }} <br>
+        <input type="text"
+            @keyUp.space="spaceKey"
+            @keyUp.up="upKey"
+        >
+    </div>
     <script src="assets/vendor/vue.js"></script>
     <script src="assets/js/app.js"></script>
 </body>

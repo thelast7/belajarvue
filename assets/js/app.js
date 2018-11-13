@@ -61,3 +61,22 @@ var app = new Vue({
         sampleFont: 'color: red; font-size: 40;'
     }
 })
+
+var app = new Vue({
+    el: '#app4',
+    data: {
+        message: '',
+        pesan: ''
+    },
+    methods: {
+        tampilAlert: function (){
+            alert('tombol ditekan via nama method')
+        },
+        spaceKey: function (){
+            this.pesan= 'anda tekan spasi'
+        },
+        upKey: function (){
+            this.pesan= 'anda menekan up'
+        }
+    }
+})
